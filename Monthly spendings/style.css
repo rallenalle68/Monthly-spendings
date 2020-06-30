@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+.header{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.month{
+    border-radius: 10px;
+    width: 600px;
+    margin: 20px auto;
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 
+    "total . .  separate separate . . ."
+    ". spendings . separate separate . earnings ."
+    "Sdate Scategories Skronor separate separate Edate Ecategories Ekronor"
+    "hello hello hello hello hello hello hello hello";
+    justify-items: center;
+    position: relative;
+}
+
+.month div{
+    margin: 10px;
+    border-bottom: black;
+}
+.month i{
+    border-bottom: 1px solid whitesmoke;
+    padding: 3px 4px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.total{
+    grid-area: total;
+    justify-self: start;
+}
+
+.spendings{
+    grid-area: spendings;
+}
+
+.earnings{
+    grid-area: earnings;
+}
+
+.Sdate{
+    grid-area: Sdate;
+}
+
+.Scategorie{
+    grid-area: Scategories;
+}
+
+.Skronor{
+    grid-area: Skronor;
+}
+
+.Edate{
+    grid-area: Edate;
+}
+
+.Ecategorie{
+    grid-area: Ecategories ;
+}
+
+.Ekronor{
+    grid-area: Ekronor;
+}
+
+.separation{
+    grid-area: separate;
+    font-size: 100px;
+    width: fit-content;
+    justify-self: center;
+}
+
+.addedThing{
+    grid-area: hello;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+}
+
+#add-btn{
+    width: 38px;
+    height: 38px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    cursor: pointer;
+}
+@keyframes close-btn{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(90deg);}
+    100%{transform: rotate(180deg);}
+
+}
+
+#add-btn i{
+    animation-name: close-btn;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    transition: linear 0.5s;
+}
+#add-btn i:hover{
+    color: #333333;
+}
+
+.bg-modal{
+    width: 0;
+    height: 0;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 1.5s;
+}
+
+
+.addThings-modal{
+    width: 500px;
+    height: 300px;
+    background: whitesmoke;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-areas: 
+    ". modal-header modal-header close-modal-btn"
+    ". Spendings-container Earnings-container ."
+    ". Sdate-input date-input ."
+    ". Scategorie-input categorie-input ."
+    ". Samount-input amount-input ."
+    ". save save .";
+    position: absolute;
+    top: -700px;
+    transition: ease 1.5s;
+} 
+
+.headering{
+    grid-area: modal-header;
+    justify-self: center;
+    align-self: start;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgb(1, 2, 36);
+}
+
+.close-modal-btn{
+    grid-area: close-modal-btn;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    justify-self: end;
+    margin-right: 3px;
+}
+
+
+
+.close-modal-btn i{
+    transition: ease 0.4s;
+}
+
+.close-modal-btn i:hover{
+    color: #333333;
+}
+
+.Spendings-container{
+    grid-area: Spendings-container;
+}
+
+.Earnings-container{
+    grid-area: Earnings-container;
+    justify-self: end;
+}
+
+.date-input{
+    grid-area: date-input;
+    justify-self: end;
+}
+
+.categorie-input{
+    grid-area: categorie-input;
+    justify-self: end;
+}
+.amount-input{
+    grid-area: amount-input;
+    justify-self: end;
+}
+
+.Sdate-input{
+    grid-area: Sdate-input;
+}
+
+.Scategorie-input{
+    grid-area: Scategorie-input;
+}
+.Samount-input{
+    grid-area: Samount-input;
+}
+
+.save{
+    grid-area: save;
+    justify-self: center;
+}
+
+.save button{
+    background: rgb(1, 2, 36);
+    border: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid 1px whitesmoke;
+    transition: ease 0.5s;
+    outline: none;
+    box-shadow: 2px 2px 5px 0px #333333;
+}
+.save button:hover{
+    box-shadow: none;
+
+
+}
+
+
+.bg-modal input{
+    color: white;
+    border: none;
+    width: 125px;
+    outline: none;
+    border-radius: 4px;
+    height: 15px;
+    padding: 3px;
+    background-color: rgb(1, 2, 36);
+}
+
+
+
+
+
