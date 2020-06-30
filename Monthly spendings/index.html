@@ -1,87 +1,98 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly spendings</title>
-    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="header">Monthly Income</h1>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Monthly spendings</title>
+      <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <h1 class="header">Monthly Income</h1>
 
-    <div class="month">
-        <div class="total" id="month-total"><i class="fas fa-dollar-sign"></i></div>
-        <div class="spendings">Spendings</div>
-        <div class="separation">|</div>
-        <div class="earnings">Earnings</div>
+      <div class="month">
+         <div class="total" id="month-total">
+            <i class="fas fa-dollar-sign"></i>
+         </div>
+         <div class="spendings">Spendings</div>
+         <div class="separation">|</div>
+         <div class="earnings">Earnings</div>
 
-        <div class="Sdate"><i class="fas fa-calendar-week"></i></div>
-        <div class="Scategorie"><i class="fas fa-layer-group"></i></div>
-        <div class="Skronor"><i class="fas fa-coins"></i></div>
+         <div class="Sdate"><i class="fas fa-calendar-week"></i></div>
+         <div class="Scategorie"><i class="fas fa-layer-group"></i></div>
+         <div class="Skronor"><i class="fas fa-coins"></i></div>
 
-        <div class="Edate"><i class="fas fa-calendar-week"></i></div>
-        <div class="Ecategorie"><i class="fas fa-layer-group"></i></div>
-        <div class="Ekronor"><i class="fas fa-coins"></i></div>
+         <div class="Edate"><i class="fas fa-calendar-week"></i></div>
+         <div class="Ecategorie"><i class="fas fa-layer-group"></i></div>
+         <div class="Ekronor"><i class="fas fa-coins"></i></div>
+      </div>
+      <div class="addedThing">
+         <div class="hello"><span id="Sdate">2020-03-05</span></div>
+         <div class="hello1"><span id="Samount">1500</span></div>
+         <div class="hello2"><span id="Scategorie">swish</span></div>
+         <div class="hello3"><span id="Edate">2020-03-05</span></div>
+         <div class="hello4"><span id="Eamount">1500</span></div>
+         <div class="hello5"><span id="Ecategorie"></span></div>
+      </div>
 
-        <div class="addedThing">
-         <span>Hello</span>
-         <span>Hello</span>
-         <span>Hello</span>
-         <span>Hello</span>
-         <span>Hello</span>
-         <span>Hello</span>
-        </div>
-    </div>
+      <div id="add-btn" onclick="addThings()">
+         <i class="fas fa-plus"></i>
+      </div>
 
+      <div id="add-modal" class="bg-modal">
+         <div class="addThings-modal" id="addThings-modal">
+            <div class="headering">
+               <h1>Add spending or Earning</h1>
+            </div>
 
-    <div id="add-btn" onclick="addThings()">
-        <i class="fas fa-plus"></i>
-    </div>
+            <div onclick="closeAddThings()" class="close-modal-btn">
+               <i class="fas fa-plus"></i>
+            </div>
 
-    <div id="add-modal" class="bg-modal">
-    <div class="addThings-modal" id="addThings-modal">
+            <div class="Spendings-container">
+               <h1>Spendings</h1>
+            </div>
 
-        <div class="headering">
-            <h1>Add spending or Earning</h1>
-        </div>
+            <div class="Sdate-input">
+               <input type="date" name="day" id="date-input" />
+            </div>
 
-        <div onclick="closeAddThings()" class="close-modal-btn">
-            <i class="fas fa-plus"></i>
-        </div>
+            <div class="Scategorie-input">
+               <input type="color" name="color" id="categorie-input" />
+            </div>
 
-        <div class="Spendings-container">
-            <h1>Spendings</h1>
-        </div>
+            <div class="Samount-input">
+               <input type="number" id="amount-input" />
+            </div>
 
-        <div class="Sdate-input"><input type="date" name="day" id="date-input"></div>
+            <div class="Earnings-container">
+               <h1>Earnings</h1>
+            </div>
 
-        <div class="Scategorie-input"><input type="color" name="color" id="categorie-input"></div>
+            <div class="date-input">
+               <input type="date" name="day" id="date-input" />
+            </div>
 
-        <div class="Samount-input"><input type="number" id="amount-input"></div>
+            <div class="categorie-input">
+               <input type="color" name="color" id="categorie-input" />
+            </div>
 
-        <div class="Earnings-container">
-            <h1>Earnings</h1>
-        </div>
+            <div class="amount-input">
+               <input type="number" id="amount-input" />
+            </div>
 
-        <div class="date-input"><input type="date" name="day" id="date-input"></div>
+            <div class="save">
+               <button>SAVE</button>
+            </div>
+         </div>
+      </div>
 
-        <div class="categorie-input"><input type="color" name="color" id="categorie-input"></div>
-
-        <div class="amount-input"><input type="number" id="amount-input"></div>
-
-        <div class="save">
-        <button>SAVE</button>
-    </div>
-    </div>
-</div>
-
-   
-
-
-
-
-    <script src="script.js"></script>
-</body>
+      <script src="script.js"></script>
+   </body>
 </html>
