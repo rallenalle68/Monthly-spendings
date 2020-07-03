@@ -11,6 +11,10 @@
          href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
          rel="stylesheet"
       />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
@@ -19,6 +23,9 @@
       <div class="month">
          <div class="total" id="month-total">
             <i class="fas fa-dollar-sign"></i>
+         </div>
+         <div class="month-header">
+            <h3>January</h3>
          </div>
          <div class="spendings">Spendings</div>
          <div class="separation">|</div>
@@ -32,13 +39,16 @@
          <div class="Ecategorie"><i class="fas fa-layer-group"></i></div>
          <div class="Ekronor"><i class="fas fa-coins"></i></div>
       </div>
-      <div class="addedThing">
-         <div class="hello"><span id="Sdate">2020-03-05</span></div>
-         <div class="hello1"><span id="Samount">1500</span></div>
-         <div class="hello2"><span id="Scategorie">swish</span></div>
-         <div class="hello3"><span id="Edate">2020-03-05</span></div>
-         <div class="hello4"><span id="Eamount">1500</span></div>
-         <div class="hello5"><span id="Ecategorie"></span></div>
+
+      <div id="conatiner">
+         <div class="addedThing">
+            <div class="hello">2020-03-05</div>
+            <div class="hello1">1500</div>
+            <div class="hello2">swish</div>
+            <div class="hello3">2020-03-05</div>
+            <div class="hello4">1500</div>
+            <div class="hello5">swhish</div>
+         </div>
       </div>
 
       <div id="add-btn" onclick="addThings()">
@@ -64,7 +74,7 @@
             </div>
 
             <div class="Scategorie-input">
-               <input type="color" name="color" id="categorie-input" />
+               <input type="text" id="categorie-input" />
             </div>
 
             <div class="Samount-input">
@@ -76,19 +86,19 @@
             </div>
 
             <div class="date-input">
-               <input type="date" name="day" id="date-input" />
+               <input type="date" name="day" id="Edate-input" />
             </div>
 
             <div class="categorie-input">
-               <input type="color" name="color" id="categorie-input" />
+               <input type="text" id="Ecategorie-input" />
             </div>
 
             <div class="amount-input">
-               <input type="number" id="amount-input" />
+               <input type="number" id="Eamount-input" />
             </div>
 
             <div class="save">
-               <button>SAVE</button>
+               <button onclick="saveMoney()">SAVE</button>
             </div>
          </div>
       </div>
